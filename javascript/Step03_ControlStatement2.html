@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_ControlStatement2.html</title>
+</head>
+<body>
+    <h1>if문 활용</h1>
+    <script>
+        /*
+            javascript에서는 어떤 변수 안에 있는 값이 비었는지 안비었는지 여부를
+            if문으로 확인할 수 있다.
+
+            비었다(empty)로 판정되는 값
+            0, "", null, undefined 이 4가지 값은 false나 마찬가지이다.
+
+            if(){}에서 ()안에 true가 아니더라도 값이 있으면 실행.
+
+            null은 아무것도 없는 빈 공간을 나타내는 예약어이다.
+        */
+       let obj = {name : "kim"};
+       if(obj){
+        console.log(obj.name);
+       }
+
+       let obj2 = null;
+       if(obj2){
+        console.log(obj2.name);
+       }
+    </script>
+</body>
+</html>

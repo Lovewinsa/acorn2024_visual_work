@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_document.html</title>
+</head>
+<style>
+    h1{
+        color : blue;
+    }
+</style>
+<body>
+    <!--    #inline css
+        요소에 직접 적용할 css를 style속성을 이용해서 작성할 수 있다.
+        - css를 적용할 요소에 직접 작성하는 것이기 때문에 선택자(selector)가 없어도 된다.
+        - 세미클론(;)으로 구분해서 "css속성명 : 적용할 값"과 같은 형식으로 작성하면 된다.
+        - <style>요소에 작성한 css보다 우선시 된다.
+        - javascript로 직접 제어할 수도 있다.
+    -->
+    <h1 style="color:red; background-color:antiquewhite;">document object 사용해보기</h1>
+    <p id="one">p1</p>
+    <!--
+        document.querySelector("#one").style.color = "blue";
+        document.querySelector("#one").style.backgroundColor = "yellow";
+                                            적용할 css속성명을 camel case로 작성한다.
+    -->
+    <p id="two" class="my-class">p2</p>
+    <p id="three" class="my-class">p3</p>
+    <button id="myBtn">눌러보셈</button>
+    <button id="changeBtn">바꾸기</button>
+    <button id="changeColor">p2의 색상 바꾸기</button>
+    <script>
+        document.querySelector("#myBtn").addEventListener("click", ()=>{
+            console.log("버튼을 눌렀네요?");
+        });
+
+        //바꾸기 버튼을 눌렀을 때 h1요소의 innerText를
+        //"안녕하세요"로 변경되도록 프로그래밍해 보세요.
+        document.querySelector("#changeBtn").addEventListener("click", ()=>{
+            document.querySelector("h1").innerText = "안녕하세요";
+        });
+
+        //p2의 색상바꾸기 버튼을 눌렀을 때 p2요소의 글자색과 배경색을
+        //원하는 색상으로 변경해 보세요.
+        document.querySelector("#changeColor").addEventListener("click", ()=>{
+            document.querySelector("#two").style.color ="white";
+            document.querySelector("#two").style.backgroundColor = "purple";
+        });
+    </script>
+</body>
+</html>

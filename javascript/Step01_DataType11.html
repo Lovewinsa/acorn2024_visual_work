@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_DataType11.html</title>
+</head>
+<body>
+    <h1>function type의 매개변수</h1>
+    <script>
+        // () 안 : 함수를 실행할 때 전달되는 값을 받을 '매개변수'를 선언할 수 있음
+        //      매개변수는 let을 사용하지 않고 변수 명만 마음대로 지으면 된다
+        // {} 안 : 함수를 실행했을 때 실행할 'code' 작성
+        let printMsg = function(msg){
+            console.log("------------");
+            console.log(msg);
+            console.log("------------");
+        };
+
+        printMsg("hello");
+        printMsg("bye");
+
+        //매개변수가 2개인 함수
+        let printSum = function(num1, num2){
+            let result = num1 + num2;
+            console.log(result);
+        };
+        printSum(10, 20);
+        printSum(100, -10);
+
+        let getSum = function(num1, num2){
+            let result = num1 + num2;
+            return result;
+        }
+
+        let result1 = getSum(10, 20);
+        let result2 = getSum(100, -10);
+    </script>
+</body>
+</html>

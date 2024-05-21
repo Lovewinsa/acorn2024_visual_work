@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_ControlStatement5.html</title>
+</head>
+<body>
+    <h1>switch문 테스트</h1>
+    <select id="weapon">
+        <option value="0">주먹</option>
+        <option value="1">칼</option>
+        <option value="2">총</option>
+    </select>
+    <button onclick="attack()">공격하기</button>
+    <button onclick="attack2()">공격하기2</button>
+    <p>
+        <strong id="result"></strong>
+    </p>
+    <script>
+        function attack(){
+            let selectedValue = document.querySelector("#weapon").value;
+            if(selectedValue==0){
+                document.querySelector("#result").innerText = "주먹으로 공격합니다";
+            } else if(selectedValue==1){
+                document.querySelector("#result").innerText = "칼로 공격합니다";
+            } else if(selectedValue==2){
+                document.querySelector("#result").innerText = "총으로 공격합니다";
+            }
+        }
+
+        function attack2(){
+            let selectedValue = Number(document.querySelector("#weapon").value);
+            switch(selectedValue){
+                case 0 :
+                    document.querySelector("#result").innerText = "주먹으로 공격합니다";
+                    break;
+                case 1 :
+                    document.querySelector("#result").innerText = "칼로 공격합니다";
+                    break;
+                case 2 :
+                    document.querySelector("#result").innerText = "총으로 공격합니다";
+                    break;
+            }
+        }
+        
+    </script>
+</body>
+</html>
